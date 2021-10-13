@@ -29,6 +29,7 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
             'data' => Auth()->user()
         ]);
 
-    Route::post('/logout')
+    Route::post('/logout',[AuthController::class,'logout']);
+
     });
 });
