@@ -28,8 +28,8 @@ Route::group(['middleware'=>['auth:sanctum']],function(){
         return response()->json([
             'data' => Auth()->user()
         ]);
+    });
 
     Route::post('/logout',[AuthController::class,'logout']);
 
-    });
 });
